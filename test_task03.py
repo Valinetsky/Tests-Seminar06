@@ -21,11 +21,36 @@ class TestUniver(unittest.TestCase):
 
         self.teacher = Teacher("LB", "Leonid Badeev")
 
-    def test_data(self):
-        # for student in self.students:
-        #     print(
-        #         f"Code: {student.code}, Name: {student.name}, Type: {student.type}")
+# ----------------------------------------------------
+
+# Тест на создание объектов студента и учителя:
+#
+# Создайте несколько объектов студентов и учителя с разными кодами и именами.
+# Убедитесь, что созданные объекты корректно хранят информацию о коде,
+# имени и типе (студент или учитель).
+
+    def test_data_code_student(self):
         self.assertEqual(self.students[0].code, "OV", "Wrong student code")
+
+    def test_data_name_student(self):
+        self.assertEqual(self.students[0].name, "Oleg Voropaev", "Wrong student name")
+
+    def test_data_type_student(self):
+        self.assertEqual(self.students[0].type, "Student", "Wrong student name")
+
+
+
+    def test_data_code_teacher(self):
+        self.assertEqual(self.teacher.code, "LB", "Wrong teacher code")
+
+    def test_data_name_teacher(self):
+        self.assertEqual(self.teacher.name, "Leonid Badeev", "Wrong teacher name")
+
+    def test_data_type_teacher(self):
+        self.assertEqual(self.teacher.type, "Teacher", "Wrong teacher name")
+
+
+    def test_data_teacher_code(self):
         self.assertEqual(self.teacher.code, "LB", "Wrong teacher code")
 
     def test_output(self):
@@ -38,11 +63,7 @@ class TestUniver(unittest.TestCase):
         self.newStudent.code = "DV"
         self.assertEqual(self.newStudent.code, "DV", "Wrong Star Wars code")
 
-# Тест на создание объектов студента и учителя:
-#
-# Создайте несколько объектов студентов и учителя с разными кодами и именами.
-# Убедитесь, что созданные объекты корректно хранят информацию о коде,
-# имени и типе (студент или учитель).
+
 
 # Тест на вывод информации:
 # Создайте объекты студентов и учителя.
